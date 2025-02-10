@@ -1,20 +1,21 @@
-// 3.4-A
-// let salarioInicial = 2000;
-// let tempo = 12; 
-// let acrescimo = Math.floor(tempo / 4); 
-// for(let i = 1; i <= acrescimo; i++) {
-//     let result = (salarioInicial * 1.01 - salarioInicial);
-//     salarioInicial += result;
-//     console.log(result);
-// }
-// console.log(salarioInicial.toFixed(2));
+// Elaborar um programa que leia um número. 
+// Informe se ele é par ou ímpar, Faça com if...else... tradicional, após, tente criar com operador ternário.
 
-// 3.4-B
-let pesoRacao = 3; //Kilos 
-let consumogato = 400; //Gramas por dia
-let pesoRacaoGramas = pesoRacao * 1000;
-let consumoFinal = Math.floor(pesoRacaoGramas / consumogato);
-let sobreaRacao = pesoRacaoGramas % consumogato;
+const h1 = document.querySelector("h1");
+const form = document.querySelector("form");
+const textP = document.querySelector("p");
 
-console.log(`A ração irá durar ${consumoFinal} dias e irá sobrar ${sobreaRacao} gramas`)
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let formImpout = Number(form.inputValue.value);
+    if(formImpout % 2 === 0) {
+        console.log("O número é par")
+    }else {
+        console.log("O número é Impar")
+    }
+    form.inputValue.value = "";
+
+    let resultTernario = formImpout % 2 === 0 ? "Par" : "Impar";
+    console.log(resultTernario);
+})
 
