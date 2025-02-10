@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Descubra o número</title>
+    <link rel="stylesheet" href="./css/ex6_2.css">
+</head>
+<body>
+    <img src="./img/numeros.jpg" class="normal">
+    <h1>Jogo Descubra o Número</h1>
+    <form>
+        <p>Número: 
+            <input type="number" id="inNumber" min="1" max="100" required autofocus>
+            <input type="submit" id="btSubmit" value="Apostar">
+            <input type="button" value="Jogar Novamente"  id="btNovo" class="oculta"
+        </p>
+        <h4 class="erros"></h4>
+        <h4 class="chances"></h4>
+        <h4 class="dica"></h4>
+    </form>
+
+    <script src="./js/ex6_2.js"></script>
+</body>
+</html>
